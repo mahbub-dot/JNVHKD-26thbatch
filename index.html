@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>26th Batch</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      text-align: center;
+
+      margin-top: 50px;
+
+    }
+
+    #section2, #section3, #section4 {
+
+      display: none;
+
+    }
+
+    button {
+
+      padding: 10px 20px;
+
+      margin-top: 15px;
+
+      font-size: 16px;
+
+    }
+
+    input {
+
+      padding: 5px;
+
+      margin: 5px;
+
+    }
+
+    a {
+
+      font-size: 18px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="section1">
+
+    <h1>Welcome 26th Batch</h1>
+
+    <p>Are you from 26th Batch?</p>
+
+    <button onclick="handleBatch('yes')">Yes</button>
+
+    <button onclick="handleBatch('no')">No</button>
+
+  </div>
+
+  <div id="section2">
+
+    <h2>Enter Your Details</h2>
+
+    <input type="text" id="name" placeholder="Enter Username"><br>
+
+    <input type="password" id="password" placeholder="Enter Password"><br>
+
+    <button onclick="checkLogin()">Submit</button>
+
+    <p id="error" style="color:red;"></p>
+
+  </div>
+
+  <div id="section3">
+
+    <h2>26th Batch Memories</h2>
+
+    <p>Click the link to see 👇</p>
+
+    <a href="https://drive.google.com/drive/folders/1OHVN6IO34w1Ir7hON6z9WkJvesDoOMGj" target="_blank">
+
+      View 26th Batch Memories
+
+    </a><br><br>
+
+    <p>If you completed seeing, click next 👇</p>
+
+    <button onclick="goToNext()">Next</button>
+
+  </div>
+
+  <div id="section4">
+
+    <h2>Stay Connected with 26th Batch</h2>
+
+    <p>If you enjoyed and want to be in touch with the 26th Batch, join the WhatsApp group 👇</p>
+
+    <a href="https://chat.whatsapp.com/LuDUg94qXHyBfcJJ5jnB4n" target="_blank">
+
+      Join 26th Batch WhatsApp Group
+
+    </a>
+
+    <h3>
+
+      Thank you<br>
+
+      Miss u 🥹 from all ...<br>
+
+      26th Batch Legends ❤️❤️
+
+    </h3>
+
+    <p>If you want to get contacts🤙...<br>Click 👇</p>
+
+    <p style="font-size: 20px;">📞 <strong>9613606388</strong></p>
+
+  </div>
+
+  <script>
+
+    function handleBatch(response) {
+
+      if (response === 'yes') {
+
+        document.getElementById('section1').style.display = 'none';
+
+        document.getElementById('section2').style.display = 'block';
+
+      } else {
+
+        alert('This is only for 26th Batch Legends 😊');
+
+      }
+
+    }
+
+    function checkLogin() {
+
+      const name = document.getElementById('name').value.trim();
+
+      const password = document.getElementById('password').value.trim();
+
+      const error = document.getElementById('error');
+
+      if (name === 'Member Legend' && password === '26thbatch@83') {
+
+        document.getElementById('section2').style.display = 'none';
+
+        document.getElementById('section3').style.display = 'block';
+
+      } else {
+
+        error.textContent = "Incorrect username or password. Try again!";
+
+      }
+
+    }
+
+    function goToNext() {
+
+      document.getElementById('section3').style.display = 'none';
+
+      document.getElementById('section4').style.display = 'block';
+
+    }
+
+  </script>
+
+</body>
+
+</html>
